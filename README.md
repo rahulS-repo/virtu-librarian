@@ -1,3 +1,6 @@
+
+---
+
 # VirtuLibrarian - Library Management System
 
 ## Overview
@@ -10,6 +13,7 @@ VirtuLibrarian is a Library Management System designed to manage books, user acc
 - [Controllers](#controllers)
 - [Security Configuration](#security-configuration)
 - [User Details Service](#user-details-service)
+- [Future Features and Releases](#future-features-and-releases)
 - [Getting Started](#getting-started)
 - [Additional Notes](#additional-notes)
 
@@ -53,25 +57,25 @@ Represents information about a user.
 Handles operations related to books.
 
 - **Endpoints**:
-    - `/api/books/search`: Search for books based on title, author, or genre.
-    - `/api/books/add-group`: Add multiple books.
-    - `/api/books/add-single`: Add a single book.
+  - `/api/books/search`: Search for books based on title, author, or genre.
+  - `/api/books/add-group`: Add multiple books.
+  - `/api/books/add-single`: Add a single book.
 
 ### 2. BookIssuedRecordController
 
 Handles operations related to book issuance records.
 
 - **Endpoints**:
-    - `/api/my-library`: Retrieve all books borrowed by the current user.
-    - `/api/borrow-book`: Borrow a book (requires a bookId parameter).
+  - `/api/my-library`: Retrieve all books borrowed by the current user.
+  - `/api/borrow-book`: Borrow a book (requires a bookId parameter).
 
 ### 3. UserController
 
 Handles operations related to user accounts.
 
 - **Endpoints**:
-    - `/api/register`: Register a new user.
-    - `/api/profile`: Retrieve the profile details of the current user.
+  - `/api/register`: Register a new user.
+  - `/api/profile`: Retrieve the profile details of the current user.
 
 ## Security Configuration
 
@@ -91,6 +95,18 @@ Implements the UserDetailsService interface for loading user details during auth
 - Retrieves user details from the UserService based on the provided email.
 - Constructs UserDetails objects for Spring Security.
 
+## Future Features and Releases
+
+VirtuLibrarian aims to introduce several exciting features in future releases:
+
+1. **Data Caching using Redis**: Implementing caching mechanisms to improve data retrieval speed and overall system performance.
+
+2. **Email Notifications for Overdue Books**: Introducing automated email notifications to remind users about overdue books.
+
+3. **Role-Based Authorization**: Enhancing security by implementing role-based authorization to control access to various features and endpoints.
+
+4. **JWT Implementation**: Adding JSON Web Token (JWT) authentication for secure and stateless user authentication.
+
 ## Getting Started
 
 To run VirtuLibrarian locally, follow these steps:
@@ -99,3 +115,5 @@ To run VirtuLibrarian locally, follow these steps:
 2. Configure the database settings in `application.properties` or `application.yml`.
 3. Build and run the application.
 
+
+---
